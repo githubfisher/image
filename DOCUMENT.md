@@ -71,7 +71,7 @@
     调用$image->output()输出到浏览器
     调用$image->output($extend, true)输出到浏览器, 文件下载
     调用$image->save()保存
-    调用$image->toString()输出字符串, 默认base64
+    调用$image->toString()输出字符串, 默认png 默认base64
      
     配合header输出到浏览器
      header('Content-type:image/png')
