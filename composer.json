@@ -1,13 +1,17 @@
 {
-  "name": "magein/image",
-  "description": "图片处理",
+  "name": "magicfier/image",
+  "description": "图片处理(缩略图,裁切,水印,圆形头像), 合成图片, 合成文字",
   "type": "library",
-  "homepage": "https://github.com/Magein/image",
+  "homepage": "https://github.com/githubfisher/image",
   "license": "Apache-2.0",
   "authors": [
     {
       "name": "xiaomage",
       "email": "1154699897@qq.com"
+    },
+    {
+      "name": "fisher",
+      "email": "gooodfisher@126.com"
     }
   ],
   "require": {
@@ -15,7 +19,7 @@
   },
   "autoload": {
     "psr-4": {
-      "magein\\": "src/"
+      "magicfier\\": "src/"
     },
     "files": []
   }
