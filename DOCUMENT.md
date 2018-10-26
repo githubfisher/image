@@ -34,7 +34,7 @@
         
         3. 处理图片字符串可以使用imagecreatefromstring
         
-### 合成文字
+### 合成文字方式1
     注意：imagefttext中字体的大小使用的是磅值（point）
      
     1. 创建画布,大小100px*100px
@@ -43,15 +43,35 @@
         
     2. 创建文字
         $canvas=Resources::instance()->createText($string, $size, $fontFile, [220, 220, 255]);
+       
+### 合成文字方式2
+    use magicfier\Image;
     
-### 合成图片    
+    $image = new Image();
+    $image->mergeText('测试文字', $fontPath, 18, 0, 0);
+    $image->output('jpg');
+    
+### 合成图片方式1   
     imagecopy($dst_resource,$src_resource,$dst_x,$dst_y,$src_x,$src_y,$src_w,$src_y);
     
     将图片处理成resource类型使用imagecopy函数处理即可
     
+### 合成图片方式2 
+    use magicfier\Image;
+    
+    $image = new Image();
+    
+    $path = realpath(__DIR__);
+    $avatar = $path.'/../public/avatar.jpg';
+    $image->mergeImage($avatar, 'png', 350,350, 200,200);
+    $image->output('jpg', true);
+    
+    
 ### 图片输出或保存
-    调用$image->output()输出
+    调用$image->output()输出到浏览器
+    调用$image->output($extend, true)输出到浏览器, 文件下载
     调用$image->save()保存
+    调用$image->toString()输出字符串, 默认base64
      
     配合header输出到浏览器
      header('Content-type:image/png')
