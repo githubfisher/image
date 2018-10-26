@@ -1,6 +1,6 @@
 <?php
 
-namespace magein\trans;
+namespace Magicfier\Trans;
 
 /**
  * 创建图片资源类型

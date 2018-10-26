@@ -1,6 +1,6 @@
 <?php
 
-namespace magein\trans;
+namespace Magicfier\Trans;
 /**
  *
  * 处理图片单位像素和磅值之间的转化

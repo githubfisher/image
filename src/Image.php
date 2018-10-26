@@ -1,8 +1,8 @@
 <?php
 
-namespace magein;
+namespace Magicfier;
 
-use magein\trans\Resources;
+use Magicfier\Trans\Resources;
 
 /**
  * Class Image
