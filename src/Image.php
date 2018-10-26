@@ -301,18 +301,19 @@ class Image
 	 * 输出字符串 默认base64
 	 * @param string $extend
 	 * @param string $encode
+	 * @param int $quality for jpg
 	 * @return string
 	 * @author fisher
 	 * @date 2018/10/26 上午11:43
 	 */
-	public function toString($extend = 'png', $encode = 'base64')
+	public function toString($extend = 'png', $encode = 'base64', $quality = 100)
 	{
 		ob_start();
 
 		switch ($extend) {
 			case 'jpg':
 			case 'jpeg':
-				imagejpeg($this->resource);
+				imagejpeg($this->resource, null, $quality);
 
 				break;
 			case 'gif':
