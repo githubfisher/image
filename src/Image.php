@@ -255,18 +255,18 @@ class Image
     /**
      * 合成图片
      * @param null $image 需要合成到底图的图片
-     * @param null $extend 后缀名或网络类型标识
      * @param int $width 目标图片宽度 (合成到底图上时, 根据目标宽高, 可能会对原图拉伸或压缩)
      * @param int $height 目标图片高度
      * @param int $top 坐标y
      * @param int $left 坐标x
      * @param null $originWidth 原始图片宽度 (指需要合成到底图的图片) 默认跟随目标宽高
      * @param null $originHeight 原始图片高度
+     * @param null $extend 后缀名或网络类型标识
      * @return resource 底图
      * @author fisher
      * @date 2018/10/26 上午10:38
      */
-    public function mergeImage($image = null, $extend = null, $width = 0, $height = 0, $top = 0, $left = 0, $originWidth = null, $originHeight = null)
+    public function mergeImage($image = null, $width = 0, $height = 0, $top = 0, $left = 0, $originWidth = null, $originHeight = null, $extend = null)
     {
         if ( ! is_resource($image)) {
             $image = Resources::instance()->get($image, $extend);
@@ -283,7 +283,7 @@ class Image
     /**
      * 合成文字 - 在底图基础上添加文字
      * @param $text //文字内容
-     * @param null $font //字体文件地址 绝对路径
+     * @param null $font //字体文件地址 绝对路径 必传
      * @param int $size 文字大小
      * @param int $top 坐标y
      * @param int $left 坐标x
