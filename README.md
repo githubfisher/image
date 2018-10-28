@@ -31,7 +31,15 @@
      
     如：Content-type:image/png ,Content-type:image/jpeg等
     
- ### 下载
+### 下载
  
      composer require magicfier/image
+     
+### 使用
+
+     use Magicfier/image;
+     
+     $image = new Image();
+     $image->mergeImage($newImagePath, $extend, $width, $height, $top, $left, $originWidth, $originHeight);
+     $image->output($extend);
      
