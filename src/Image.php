@@ -266,7 +266,7 @@ class Image
      * @author fisher
      * @date 2018/10/26 上午10:38
      */
-    public function mergeImage($image = null, $width = 0, $height = 0, $top = 0, $left = 0, $originWidth = null, $originHeight = null, $extend = null)
+    public function mergeImage($image = null, $extend = null, $width = 0, $height = 0, $top = 0, $left = 0, $originWidth = null, $originHeight = null)
     {
         if ( ! is_resource($image)) {
             $image = Resources::instance()->get($image, $extend);
